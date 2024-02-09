@@ -149,7 +149,7 @@ if __name__ == '__main__':
               loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
               metrics=['accuracy'])
     model1.summary()
-    #model1.fit(train_images, train_labels, epochs=1, batch_size=32)
+    #model1.fit(train_images, train_labels, epochs=50, batch_size=32)
     
     #predict = model1.predict(np.expand_dims(image, axis=0))
     #predict_class_index = np.argmax(predict[0])
@@ -163,14 +163,14 @@ if __name__ == '__main__':
             loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
             metrics=['accuracy'])
     model2.summary()
-    #model2.fit(train_images, train_labels, epochs=1, batch_size=32)
+    #model2.fit(train_images, train_labels, epochs=50, batch_size=32)
     
     model3 = build_model3()
     model3.compile(optimizer='adam',
             loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
             metrics=['accuracy'])
     model3.summary()
-    #model3.fit(train_images, train_labels, epochs=1, batch_size=32)
+    #model3.fit(train_images, train_labels, epochs=50, batch_size=32)
 
     model50k = build_model50k()
     model50k.compile(optimizer='adam',
